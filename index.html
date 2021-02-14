@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+	li:nth-child(odd)
+    {
+    	background:yellow;
+    }
+    li:nth-child(even)
+    {
+    	background:#ffb2fc;
+    }
+    </style>
+    <title>TODO</title>
+</head>
+<body>
+    
+    <div class="container" style="margin-top: 10px;">
+        <div class="row">
+            <div class="col-md-6" style="margin: auto">
+                <div class="card">
+                    <div class="card-header" style="text-align: center;font-size: larger; background-color: aqua;">TODO Ekle</div>
+                    <div class="card-body">
+                        <form id="todo-form" name="form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="todo" id = "todo" placeholder="Bir Todo Girin">
+                                </div>
+                            </div>
+                            <br>
+                            <button class="btn btn-outline-primary pull-left" type="submit">Todo Ekle</button>
+                            <button type="reset" class="btn btn-outline-danger pull-right">İçeriği Temizle</button>
+                        </form>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6" style="margin: auto">
+                <div class="card">
+                    <div class="card-header" style="text-align: center;font-size: larger; background-color: aqua;">TODO Listesi</div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="filter" id = "filter" placeholder="Bir Todo Arayın">
+                            </div>
+                        </div>
+                        <br>
+                        <ul class="list-group">
+                            <!-- <li class="list-group-item d-flex justify-content-between list-group-item-action">
+                                Todo 1
+                                <a href = "#" class ="delete-item">
+                                    <i class = "fa fa-remove"></i>
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between list-group-item-action">
+                                Todo 2
+                                <a href = "#" class ="delete-item">
+                                    <i class = "fa fa-remove"></i>
+                                </a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between list-group-item-action">
+                                Todo 3
+                                <a href = "#" class ="delete-item">
+                                    <i class = "fa fa-remove"></i>
+                                </a>
+                            </li> -->
+                        </ul>
+                        <br>
+                        <a id = "clear-todos" class="btn btn-outline-danger col-md-12" href="#">Tüm Todoları Temizle</a>  
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="jquery-3.5.1.slim.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
