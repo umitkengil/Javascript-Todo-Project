@@ -13,6 +13,7 @@
     li:nth-child(even)
     {
     	background:#ffb2fc;
+
     }
     </style>
     <title>TODO</title>
@@ -32,11 +33,11 @@
                                 </div>
                             </div>
                             <br>
-                            <button class="btn btn-outline-primary pull-left" type="submit">Todo Ekle</button>
+                            <button type="submit" class="btn btn-outline-primary pull-left">Todo Ekle</button>
                             <button type="reset" class="btn btn-outline-danger pull-right">İçeriği Temizle</button>
                         </form>
                     </div>
-                    <div class="card-footer"></div>
+                    <div class="card-footer"  style="background-color: #ffb2fc;"></div> <!--eklenen todo yu show etme alanı-->
                 </div>
             </div>
         </div>
@@ -52,36 +53,15 @@
                             </div>
                         </div>
                         <br>
-                        <ul class="list-group">
-                            <!-- <li class="list-group-item d-flex justify-content-between list-group-item-action">
-                                Todo 1
-                                <a href = "#" class ="delete-item">
-                                    <i class = "fa fa-remove"></i>
-                                </a>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between list-group-item-action">
-                                Todo 2
-                                <a href = "#" class ="delete-item">
-                                    <i class = "fa fa-remove"></i>
-                                </a>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between list-group-item-action">
-                                Todo 3
-                                <a href = "#" class ="delete-item">
-                                    <i class = "fa fa-remove"></i>
-                                </a>
-                            </li> -->
-                        </ul>
+                        <ul class="list-group"><!--Dinamik listemele/storage'den al--></ul>
                         <br>
                         <a id = "clear-todos" class="btn btn-outline-danger col-md-12" href="#">Tüm Todoları Temizle</a>  
                     </div>
-                    <div class="card-footer"></div>
+                    <div class="card-footer" style="background-color: #ffb2fc;"></div>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <script src="jquery-3.5.1.slim.min.js"></script>
     <script src="bootstrap.min.js"></script>
