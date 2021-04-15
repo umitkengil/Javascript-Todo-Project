@@ -1,5 +1,3 @@
-//Elementleri tanımla
-
 const form = document.querySelector("#todo-form");
 const inputTodo = document.querySelector("#todo");
 const listTodo = document.querySelector(".list-group");
@@ -7,6 +5,7 @@ const cardFooter1 = document.querySelectorAll(".card-footer")[0];
 const cardFooter2 = document.querySelectorAll(".card-footer")[1];
 const removeButton = document.querySelectorAll(".card-body")[1];
 const clearTodos = document.querySelector("#clear-todos");
+const filterTodos = document.querySelector("#filter");
 
 eventListener();
 
@@ -15,6 +14,7 @@ function eventListener() {
     document.addEventListener("DOMContentLoaded",getAllTodoStorage);
     removeButton.addEventListener("click",deleteTodo);
     clearTodos.addEventListener("click",allDeleteTodos);
+    filterTodos.addEventListener("keyup",filterTodo);
 }
 
 function addTodo(e){
@@ -133,4 +133,21 @@ function allDeleteTodos(){
        listTodo.innerHTML="";
     }
     localStorage.removeItem("todos");
+}
+
+function filterTodo(e){
+
+    const filter = e.target.value.toLowerCase();
+    const list = document.querySelectorAll(".list-group-item");
+
+    list.forEach(function(item){
+       const text = item.textContent.toLocaleLowerCase();
+       if(text.indexOf(filter)===-1){
+           item.setAttribute("style","display:none !important");
+       }
+       else{
+           item.setAttribute("style","display:block");
+       }
+    });
+
 }
